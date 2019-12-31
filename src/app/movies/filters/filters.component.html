@@ -1,0 +1,92 @@
+<mat-card>
+
+<div class="cardrow">
+<mat-form-field >
+  <mat-label> Genre </mat-label>
+  <mat-select [formControl]="genre" multiple>
+    <mat-select-trigger>
+      {{genre.value ? genre.value[0] : ''}}
+      <span *ngIf="genre.value?.length > 1" class="example-additional-selection">
+        (+{{genre.value.length - 1}} {{genre.value?.length === 2 ? 'other' : 'others'}})
+      </span>
+    </mat-select-trigger>
+    <mat-option *ngFor="let value of genreList" [value]="value"> {{value}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field >
+  <mat-label> Director </mat-label>
+  <mat-select [formControl]="director" multiple>
+    <mat-select-trigger>
+      {{director.value ? director.value[0] : ''}}
+      <span *ngIf="director.value?.length > 1" class="example-additional-selection">
+        (+{{director.value.length - 1}} {{director.value?.length === 2 ? 'other' : 'others'}})
+      </span>
+    </mat-select-trigger>
+    <mat-option *ngFor="let value of directorList" [value]="value"> {{value}}</mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+
+<div class="cardrow">
+  <mat-form-field >
+    <mat-label> Actor </mat-label>
+    <mat-select [formControl]="actor" multiple>
+      <mat-select-trigger>
+        {{actor.value ? actor.value[0] : ''}}
+        <span *ngIf="actor.value?.length > 1" class="example-additional-selection">
+          (+{{actor.value.length - 1}} {{actor.value?.length === 2 ? 'other' : 'others'}})
+        </span>
+      </mat-select-trigger>
+      <mat-option *ngFor="let value of actorList" [value]="value"> {{value}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field >
+    <mat-label> Year </mat-label>
+    <mat-select [formControl]="year" multiple>
+      <mat-select-trigger>
+        {{year.value ? year.value[0] : ''}}
+        <span *ngIf="year.value?.length > 1" class="example-additional-selection">
+          (+{{year.value.length - 1}} {{year.value?.length === 2 ? 'other' : 'others'}})
+        </span>
+      </mat-select-trigger>
+      <mat-option *ngFor="let value of yearList" [value]="value"> {{value}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div>
+
+
+<div class="cardrow">
+  <mat-form-field >
+    <mat-label> Rating </mat-label>
+    <mat-select [formControl]="rating" multiple>
+      <mat-select-trigger>
+        {{rating.value ? rating.value[0] : ''}}
+        <span *ngIf="rating.value?.length > 1" class="example-additional-selection">
+          (+{{rating.value.length - 1}} {{rating.value?.length === 2 ? 'other' : 'others'}})
+        </span>
+      </mat-select-trigger>
+      <mat-option *ngFor="let value of ratingList" [value]="value"> {{value}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field >
+    <mat-label> Awards </mat-label>
+    <mat-select [formControl]="awards" multiple>
+      <mat-select-trigger>
+        {{awards.value ? awards.value[0] : ''}}
+        <span *ngIf="awards.value?.length > 1" class="example-additional-selection">
+          (+{{awards.value.length - 1}} {{awards.value?.length === 2 ? 'other' : 'others'}})
+        </span>
+      </mat-select-trigger>
+      <mat-option *ngFor="let value of awardList" [value]="value"> {{value}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div>
+
+
+</mat-card>
+
+
+

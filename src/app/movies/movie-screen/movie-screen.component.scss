@@ -1,0 +1,9 @@
+.moviecolumns {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.moviecolumns>* {
+        flex: 1 1 50%;
+    }

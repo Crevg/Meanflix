@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../movie';
 
 @Component({
   selector: 'app-details',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
+  private currentMovie: Movie;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getCurrentMovie(): Movie {
+    return this.currentMovie;
   }
 
 }
